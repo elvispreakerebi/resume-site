@@ -12,7 +12,12 @@ html {
     padding: 0;
 }
 
-img {
+.image {
     width: 100%;
     object-fit: cover;
+}
+
+.container {
+    padding: 50px 12px;
+    width: 100%;
 }

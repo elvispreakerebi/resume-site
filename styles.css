@@ -52,10 +52,21 @@ nav {
     background: var(--background-color);
     padding: 4px;
     display: flex;
-    gap: 64px;
-    align-items: center;
+    flex-direction: column;
+    gap: 20px;
     border: 1px solid #A6AEB2;
     border-radius: 4px;
+}
+
+#normal-nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+#mobile-nav-items {
+    display: none;
+    flex-direction: column;
 }
 
 .logo {
@@ -71,7 +82,10 @@ nav {
 .nav-items {
     width: 100%;
     display: none;
-    flex-direction: column;
+}
+
+#nav-items {
+    justify-content: flex-end;
 }
 
 .nav-item {
@@ -213,6 +227,7 @@ nav {
     width: 100%;
     border-radius: 4px;
     border: 1px solid var(--outline-color);
+    cursor: pointer;
 }
 
 .experience-title-container {
@@ -294,18 +309,18 @@ footer {
     justify-content: center;
 }
 
+/* code for screen size of at least 768px */
 @media screen and (min-width: 768px) {
 
     nav {
         padding: 12px 64px;
     }
 
-    .nav-items {
+    #nav-items {
         display: flex;
-        flex-direction: row;
     }
 
-    .lucide-menu {
+    img#menu-icon {
         display: none;
     }
 
@@ -322,7 +337,7 @@ footer {
     }
 
     nav {
-        padding: 12px 400px;
+        padding: 12px 200px;
     }
 
     #header-top-texts h2 {
@@ -337,4 +352,14 @@ footer {
         font-size: 22px;
     }
 
+    .section-title {
+        font-size: 22px;
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+    nav {
+        padding: 12px 400px;
+    }
 }
